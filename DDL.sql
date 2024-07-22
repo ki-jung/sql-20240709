@@ -27,15 +27,49 @@ CREATE TABLE data_type(
     boolean_column BOOLEAN,
     -- varchar(문자열길이) : 가변길이 문자열
     string_column VARCHAR(10),
-    -- TEXT : 문자열
+    -- TEXT : 단순 장문 문자열
     text_column TEXT,
     -- DATE : 날짜
     date_column DATE,
     -- DATETIME : 날짜 및 시간
     datetime_column DATETIME
 );
+
 -- 사용자 생성
 -- CREATE USER '사용자명'@'접속IP' IDENTIFIED  by '비밀번호';
 CREATE USER 'developer'@'127.0.0.1' IDENTIFIED  BY 'P!ssw0rd';
 CREATE USER 'developer'@'192.168.1.101' IDENTIFIED  BY 'P!ssw0rd';
 CREATE USER 'developer'@'%' IDENTIFIED  BY 'P!ssw0rd';
+
+-- DROP :  데이터 구조(스키마)를 삭제하는 명령어
+-- DROP 스키마명
+
+-- 사용자 삭제
+DROP USER 'developer'@'%';
+
+-- 테이블 삭제
+-- 만약에 해당 테이블을 참조하고 있는 다른 테이블이 존재하면 삭제가 불가능
+DROP TABLE example_table;
+
+-- 데이터베이스 삭제
+DROP DATABASE practice_sql;
+
+-- ALTER : 구조를 변경하는 명령어
+
+-- 테이블의 컬럼 추가
+ALTER TABLE example_table add example_column3 VARCHAR(10);
+
+-- 테이블 컬럼 삭제
+ALTER TABLE example_table DROP column example_column3;
+
+-- 테이블 컬럼 타입 수정
+ALTER TABLE example_table
+MODIFY COLUMN example_column2 text;
+
+-- 테이블 컬럼 전체 수정
+ALTER TABLE example_table
+CHANGE example_column1 column1 VARCHAR(20);
+
+-- 데이터베이스 문자셋 변경
+ALTER DATABASE practice_sql DEFAULT CHARACTER SET utf8;
+
