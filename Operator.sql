@@ -154,4 +154,4 @@ ORDER By amount DESC, tax;
 -- 중복제거
 -- DISTINCT : SELECT 결과 테이블에서 컬럼의 조합의 중복을 제거하여 출력
 SELECT DISTINCT breakdown FROM transaction;
-SELECT DISTINCT breakdown, amount  FROM transaction;
+SELECT DISTINCT breakdown, amount FROM transaction;
