@@ -50,7 +50,6 @@ DROP USER 'developer'@'%';
 -- 테이블 삭제
 -- 만약에 해당 테이블을 참조하고 있는 다른 테이블이 존재하면 삭제가 불가능
 DROP TABLE example_table;
-
 -- 데이터베이스 삭제
 DROP DATABASE practice_sql;
 
