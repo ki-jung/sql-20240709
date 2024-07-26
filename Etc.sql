@@ -42,6 +42,8 @@ Select concat(사원이름,부서명)From employee_view;
 Select left(사원이름,2), Right(사원이름,2) 
 From employee_view;
 
+
+
 -- replace(기준문자열, 찾을문자열, 바꿀문자열) : 특정 문자열을 지정한 문자열로 변경하는 함수
 Select Replace(사원이름, '길동','순자')
 From employee_view;
